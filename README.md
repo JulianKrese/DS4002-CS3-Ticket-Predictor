@@ -18,7 +18,7 @@ This project analyzes the Charlottesville Open Data Portal to train various mode
         - Windows --> `python -m venv .venv && .venv\Scripts\activate`
             - Note, if you are user a newer python it may be `python3 ...` for all commands
     - Install required packages
-        - within the terminal, `pip install -r requirements.txt`
+        - within the terminal, `pip install -r "./Supplemental Materials/requirements.txt"`
     - Register the Jupyter kernel (if using notebooks outside VS Code):
         - `pip install ipykernel`
         - `python -m ipykernel install --user --name=.venv`

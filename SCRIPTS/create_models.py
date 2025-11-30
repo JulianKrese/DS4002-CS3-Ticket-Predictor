@@ -43,8 +43,12 @@ X_features = features.copy()  # list of feature names
 # -------------------------------
 # 3. Create output directory for models
 # -------------------------------
-model_dir = "./OUTPUT/models"
+base_dir = "./OUTPUT"
+if os.path.exists(base_dir):
+    shutil.rmtree(base_dir)
+os.makedirs(base_dir)
 
+model_dir = "./OUTPUT/models"
 # Remove old models directory if it exists, to avoid conflicts
 if os.path.exists(model_dir):
     shutil.rmtree(model_dir)
