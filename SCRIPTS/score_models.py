@@ -14,11 +14,11 @@ Usage:
 
 Inputs:
     - ../DATA/Final/encoded_parking_tickets.csv : encoded numeric dataset
-    - ../OUTPUT/Final/models/ : directory containing trained models and scalers
+    - ../OUTPUT/models/ : directory containing trained models and scalers
 
 Outputs:
     - Printed DataFrame showing accuracy of each model on 2024 test set
-    - A bar graph of model accuracies saved as ../OUTPUT/Final/model_performance.png
+    - A bar graph of model accuracies saved as ../OUTPUT/model_performance.png
 ===============================================================================
 """
 
@@ -52,7 +52,7 @@ X_test = df_test[features]
 # -------------------------------
 # 3. Load trained models
 # -------------------------------
-model_dir = "./OUTPUT/Final/models"
+model_dir = "./OUTPUT//models"
 
 # Identify all Isolation Forest model files
 model_files = [
@@ -110,7 +110,7 @@ print("\n--- Model performance on 2024 test set ---")
 print(results_df)
 
 # save the csv to final output folder
-results_df.to_csv('./OUTPUT/Final/model_performance.csv', index=False)
+results_df.to_csv('./OUTPUT/model_performance.csv', index=False)
 
 # create and save the bar graph to final output folder
 graph = results_df.plot.bar(
@@ -132,5 +132,5 @@ plt.axhline(y=0.8, color='red', linestyle='--', linewidth=2, label='Goal: 80%')
 
 plt.legend()
 plt.tight_layout()
-plt.savefig('./OUTPUT/Final/model_performance.png', dpi=300, bbox_inches='tight')
+plt.savefig('./OUTPUT/model_performance.png', dpi=300, bbox_inches='tight')
 plt.close()

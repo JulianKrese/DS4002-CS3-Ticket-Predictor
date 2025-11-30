@@ -3,10 +3,16 @@
 This project analyzes the Charlottesville Open Data Portal to train various models based on different time frames of tickets within the city. In the end, we arrived at one final model that had the greatest accuracy at **96.6%**, which was trained on the **2009-2013** time frame.
 
 ## Running
-1) Base Installations
+1) Introduction
+    - Read motivating articles in the `/Supplemental Materials` folder
+        - Tax Policy Center article on equity related to fines such as aggressive ticketing systems.
+        - INRIX to understand the costs of parking imposed on the driver outside of tickets.
+    - Read Hook.pdf to understand the case and its context
+    - Read Rubric.pdf to understand your goal
+2) Base Installations
     - Install Python 3.10+
         - more information can be found at https://www.python.org/downloads/
-2) Project Installations
+3) Project Installations
     - Create python environment
         - macOS/Linux --> `python -m venv .venv && source .venv/bin/activate`
         - Windows --> `python -m venv .venv && .venv\Scripts\activate`
@@ -17,7 +23,7 @@ This project analyzes the Charlottesville Open Data Portal to train various mode
         - `pip install ipykernel`
         - `python -m ipykernel install --user --name=.venv`
         - alternatively, in VS code you may have to define your interpreter as the one located in your venv. 
-3) Run
+4) Run
     - If you want to recreate all final files, within the base directory, run in order...
         1) `clean_parking_data.py` to re-create the cleaned data
         2) `create_models.py` to re-create the models on the train split

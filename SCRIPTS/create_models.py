@@ -13,7 +13,7 @@ Usage:
 Inputs:
     - ../DATA/Final/encoded_parking_tickets.csv : preprocessed numeric dataset
 Outputs:
-    - ../OUTPUT/Final/models/ : directory containing trained models and scalers
+    - ../OUTPUT/models/ : directory containing trained models and scalers
         e.g. isolation_forest_2010-2014.joblib
              scaler_2010-2014.joblib
 ===============================================================================
@@ -43,7 +43,7 @@ X_features = features.copy()  # list of feature names
 # -------------------------------
 # 3. Create output directory for models
 # -------------------------------
-model_dir = "./OUTPUT/Final/models"
+model_dir = "./OUTPUT/models"
 
 # Remove old models directory if it exists, to avoid conflicts
 if os.path.exists(model_dir):
